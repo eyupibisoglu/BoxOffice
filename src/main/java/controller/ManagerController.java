@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import application.BoxOffice;
@@ -41,7 +42,7 @@ public class ManagerController implements Initializable, IController
 	@FXML private HBox ticketBox;
 	@FXML private HBox updateBox;
 
-	private ArrayList<TableView> tableViews = new ArrayList<TableView>();
+	private List<TableView> tableViews = new ArrayList<TableView>();
 
 	public void initialize(URL location, ResourceBundle resources)
 	{

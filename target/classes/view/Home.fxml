@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+
+
+  
+<BorderPane id="flowPane" stylesheets="css/home.css" fx:controller="controller.HomeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+	<top>
+		<HBox fx:id="theaterBox" minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
+			<Label id="header-label" text="Home Panel" />		
+		</HBox>
+	</top>
+	<center>
+		<HBox id="centerBox" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-alignment:center;">
+				<Button fx:id="managerButton" text="Manager" prefHeight="130.0" prefWidth="140.0" contentDisplay="TOP">
+					<graphic>
+	                    <ImageView fitHeight="128.0" fitWidth="128.0">
+	                        <Image url="icon/manager.png"/>
+	                    </ImageView>
+                	</graphic>
+				</Button>
+				
+				<Button fx:id="customerButton" text="Customer" prefHeight="130.0" prefWidth="140.0"  contentDisplay="TOP">
+					<graphic>
+	                    <ImageView>
+	                        <Image url="icon/customer.png"/>
+	                    </ImageView>
+                	</graphic>
+				</Button>
+		</HBox>
+  	</center>
+  	<bottom>
+  		<HBox minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
+		</HBox>
+  	</bottom>
+</BorderPane>
+
+<!-- <stylesheets> -->
+<!-- 	<URL value="home.css" /> -->
+<!-- </stylesheets> -->

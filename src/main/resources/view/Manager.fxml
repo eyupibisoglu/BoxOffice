@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane id="flowPane" stylesheets="css/manager.css" fx:controller="controller.ManagerController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+	<top>
+		<HBox fx:id="theaterBox" minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
+			<Label id="header-label" text="Manager Panel" />		
+		</HBox>
+	</top>
+	<center>
+		
+		<TabPane prefHeight="500.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Theater">
+					<content>
+						<HBox fx:id="theaterBox" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+							
+						</HBox>
+					</content>
+				</Tab>
+				<Tab text="Scene">
+					<content>
+						<HBox fx:id="sceneBox" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+					    	
+					    </HBox>
+				    </content>
+			    </Tab>
+			    <Tab text="Movie">
+				    <content>
+					    <HBox fx:id="movieBox" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+					    	
+					    </HBox>
+				    </content>
+			    </Tab>
+			    <Tab text="Ticket">
+					<content>
+						<HBox fx:id="ticketBox" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+							
+						</HBox>
+					</content>
+				</Tab>
+		    </tabs>
+	    </TabPane>
+	  
+	    
+  	</center>
+  	<bottom>
+  		<HBox fx:id="updateBox" minHeight="0.0" minWidth="0.0">
+		</HBox>
+  	</bottom>
+</BorderPane>

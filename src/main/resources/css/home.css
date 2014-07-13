@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+
+.root
+{
+	-fx-background-color: linear-gradient(#EEEEEE, #DDDDDD);
+	-fx-font-size: 12;
+	-fx-font-weight: bold;
+}
+
+#header-label
+{
+	-fx-font: 20px "Molot";
+	-fx-alignment: CENTER;	
+	-fx-font-weight: bold;
+	-fx-padding:10 5 5 15;
+	-fx-text-fill: #545454;
+}
+
+#centerBox
+{
+	-fx-padding:20;
+	-fx-spacing:10;
+	
+}

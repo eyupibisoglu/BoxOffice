@@ -38,7 +38,7 @@ import model.Theater;
 import model.Time;
 
 @Data
-public class CustomerController implements Initializable, IController
+public class CustomerController extends Controller implements Initializable
 {
 	@FXML private HBox customerMoviesBox;
 	@FXML private HBox customerTopBox;

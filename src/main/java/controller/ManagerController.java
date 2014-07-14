@@ -34,7 +34,7 @@ import model.Theater;
 import model.Ticket;
 
 @Data
-public class ManagerController implements Initializable, IController
+public class ManagerController extends Controller implements Initializable
 {
 	@FXML private HBox movieBox;
 	@FXML private HBox sceneBox;

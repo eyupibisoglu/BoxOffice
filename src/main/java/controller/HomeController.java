@@ -22,19 +22,19 @@ import lombok.Data;
 import model.Ticket;
 
 @Data
-public class HomeController implements Initializable
+public class HomeController extends Controller implements Initializable
 {
 	private javafx.scene.Scene scene;
-	
+
 	@FXML private Button customerButton;
 	@FXML private Button managerButton;
-	
+
 	public void initialize(URL location, ResourceBundle resources)
 	{
 //		setCustomerButton(new Button("Customer", new ImageView(new Image("/icon/customer.png"))));
 		setButtonEvents();
 	}
-	
+
 	private void setButtonEvents()
 	{
 		getCustomerButton().setOnMouseClicked(new EventHandler<MouseEvent>()
@@ -42,7 +42,7 @@ public class HomeController implements Initializable
 			public void handle(MouseEvent event)
 			{
 				FXMLLoader fxmlLoader = new FXMLLoader();
-				
+
 				Parent root = null;
 				try
 				{
@@ -52,20 +52,20 @@ public class HomeController implements Initializable
 				{
 					e.printStackTrace();
 				}
-				
+
 				LoginController controller = fxmlLoader.getController();
 				controller.setPageName(getCustomerButton().getText());
-				
+
 				BoxOffice.stage.setScene(new javafx.scene.Scene(root, 600, 375));
 			}
 		});
-		
+
 		getManagerButton().setOnMouseClicked(new EventHandler<MouseEvent>()
 		{
 			public void handle(MouseEvent event)
 			{
 				FXMLLoader fxmlLoader = new FXMLLoader();
-				
+
 				Parent root = null;
 				try
 				{
@@ -75,11 +75,11 @@ public class HomeController implements Initializable
 				{
 					e.printStackTrace();
 				}
-				
+
 				LoginController controller = fxmlLoader.getController();
-				
+
 				controller.setPageName(getManagerButton().getText());
-				
+
 				BoxOffice.stage.setScene(new javafx.scene.Scene(root, 600, 375));
 			}
 		});

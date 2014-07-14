@@ -22,15 +22,15 @@ import model.Customer;
 import model.Person;
 
 @Data
-public class LoginController  implements Initializable
+public class LoginController extends Controller  implements Initializable
 {
 	private String pageName;
 	private static Person person; // Person that login.
-	
+
 	@FXML private TextField nameField;
 	@FXML private TextField surnameField;
 	@FXML private Button formButton;
-	
+
 	public void initialize(URL location, ResourceBundle resources)
 	{
 		setComponentsEvents();
@@ -39,21 +39,21 @@ public class LoginController  implements Initializable
 	public Person getLoginPerson()
 	{
 		Person person = new Person(getNameField().getText(), getSurnameField().getText());
-		
+
 		ArrayList<Person> people = (ArrayList<Person>) new DataFactory().getData("db/" + getPageName() + ".data");
-		
-		
-		
+
+
+
 		if (people.contains(person))
 		{
 			Integer i = 0;
 			Integer size = people.size();
-			
+
 			while ((!people.get(i).getName().equals(person.getName()) || !people.get(i).getSurname().equals(person.getSurname())))
 				i++;
-			
+
 			return people.get(i);
-		}	
+		}
 		else
 		{
 			try
@@ -64,27 +64,27 @@ public class LoginController  implements Initializable
 			{
 				System.out.println(e1.getMessage());
 			}
-			
+
 			return null;
 		}
-		
-		
+
+
 	}
-	
+
 	public void setComponentsEvents()
 	{
 		getFormButton().setOnMouseClicked(new EventHandler<MouseEvent>()
 		{
 			public void handle(MouseEvent event)
 			{
-				
-				
-				
+
+
+
 				setPerson(getLoginPerson());
-					
-					
+
+
 				FXMLLoader fxmlLoader = new FXMLLoader();
-				
+
 				Parent root = null;
 				try
 				{
@@ -94,8 +94,8 @@ public class LoginController  implements Initializable
 				{
 					e.printStackTrace();
 				}
-				
-				IController controller = fxmlLoader.getController();
+
+				Controller controller = fxmlLoader.getController();
 				BoxOffice.stage.setScene(new javafx.scene.Scene(root, 1400, 875));
 			}
 		});
@@ -112,11 +112,11 @@ public class LoginController  implements Initializable
 	{
 		LoginController.person = person;
 	}
-	
+
 	public void setPageName(String pageName)
 	{
 		this.pageName = pageName;
-		
+
 		if (pageName.equals("Customer"))
 		{
 			getNameField().setText("Eyüp");

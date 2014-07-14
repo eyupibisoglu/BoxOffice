@@ -36,7 +36,7 @@ import model.Theater;
 import model.Ticket;
 
 @Data
-public class TheaterController implements Initializable
+public class TheaterController extends Controller implements Initializable
 {
 	private Integer theaterIndex;
 	private Integer sceneIndex;
